@@ -5,22 +5,29 @@
    <extension
          point="org.eclipse.ui.popupMenus">
       <objectContribution
-            objectClass="org.eclipse.core.resources.IFile"
+            objectClass="java.lang.Object"
             id="EasyExplorer.contribution1">
          <menu
-               label="New Submenu"
+               label="Click me!"
                path="additions"
-               id="EasyExplorer.menu1">
+               id="EasyExplorer.Explorer">
             <separator
                   name="group1">
             </separator>
          </menu>
          <action
-               label="New Action"
-               class="easyexplorer.popup.actions.NewAction"
-               menubarPath="EasyExplorer.menu1/group1"
+               label="Open CMD"
+               class="easyexplorer.popup.actions.OpenCMD"
+               menubarPath="EasyExplorer.Explorer/group1"
                enablesFor="1"
-               id="EasyExplorer.newAction">
+               id="EasyExplorer.openCmd">
+         </action>
+         <action
+               class="easyexplorer.popup.actions.OpenExplorer"
+               enablesFor="1"
+               id="EasyExplorer.openExplorer"
+               label="Open Explorer"
+               menubarPath="EasyExplorer.Explorer/group1">
          </action>
       </objectContribution>
    </extension>
