@@ -7,18 +7,9 @@
       <objectContribution
             objectClass="java.lang.Object"
             id="EasyExplorer.contribution1">
-         <menu
-               label="Click me!"
-               path="additions"
-               id="EasyExplorer.Explorer">
-            <separator
-                  name="group1">
-            </separator>
-         </menu>
          <action
                label="Open CMD"
                class="easyexplorer.popup.actions.OpenCMD"
-               menubarPath="EasyExplorer.Explorer/group1"
                enablesFor="1"
                id="EasyExplorer.openCmd">
          </action>
@@ -26,8 +17,7 @@
                class="easyexplorer.popup.actions.OpenExplorer"
                enablesFor="1"
                id="EasyExplorer.openExplorer"
-               label="Open Explorer"
-               menubarPath="EasyExplorer.Explorer/group1">
+               label="Open Explorer">
          </action>
       </objectContribution>
    </extension>
