@@ -2,8 +2,7 @@ package easyexplorer.popup.actions;
 
 import java.io.File;
 
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.jdt.core.IJavaElement;
 import org.eclipse.jdt.core.IJavaProject;
@@ -19,10 +18,8 @@ public class PathUtil {
 		
 		String file_Path = null;
 		IPath path = null;
-		if(object instanceof IFile){
-			path = ((IFile)object).getLocation();
-		}else if(object instanceof IFolder){
-			path = ((IFolder)object).getLocation();
+		if(object instanceof IResource){
+			path = ((IResource)object).getLocation();
 		} else if (object instanceof IJavaProject) {
 			path = ((IJavaProject)object).getResource().getLocation();
 		} else if (object instanceof IJavaElement) {
