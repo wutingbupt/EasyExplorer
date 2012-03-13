@@ -7,6 +7,19 @@
       <objectContribution
             objectClass="java.lang.Object"
             id="EasyExplorer.contribution1">
+        <visibility>
+           <or>
+              <objectClass
+                    name="org.eclipse.core.resources.IResource">
+              </objectClass>
+              <objectClass
+                    name="org.eclipse.jdt.core.IJavaProject">
+              </objectClass>
+              <objectClass
+                    name="org.eclipse.jdt.core.IJavaElement">
+              </objectClass>
+           </or>
+        </visibility>
          <menu
                label="Click me!"
                path="additions"
